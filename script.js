@@ -10,7 +10,7 @@ setInterval(function seconds() {
     var hours = Math.floor(minutes / 60);
     var minutes = Math.floor(minutes % 60);
 
-    document.getElementById("timer").innerHTML = hours + " " + minutes + " " + seconds;
+    document.getElementById("timer").innerHTML = hours + ":" + minutes + ":" + seconds;
 }, 1000 )
 
 
