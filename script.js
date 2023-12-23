@@ -1,7 +1,11 @@
 var time = new Date("December 25, 2023 09:00:00").getTime();
 
-setInterval(function seconds() {
-    var timeNow = new Date().getTime();
+var timeNow = new Date().getTime();
+
+
+    const counter = setInterval(function seconds() {
+
+    timeNow = new Date().getTime();
 
     var timer = Math.floor((time - timeNow) / 1000);
 
@@ -9,8 +13,19 @@ setInterval(function seconds() {
     var minutes = Math.floor(timer / 60);
     var hours = Math.floor(minutes / 60);
     var minutes = Math.floor(minutes % 60);
+    
+    if(hours >= 0 && minutes >= 0 && seconds >= 0){
+    document.getElementById("timer").innerHTML = hours + ":" + minutes + ":" + seconds;}
+    
+    else{
+        document.getElementById("steam").innerHTML = "Kolla steam: spelet är Moving Out;"; 
+                    document.getElementById("timer").innerHTML =  0 + ":" + 0 + ":" + 0;
+            clearInterval(counter);
+    }
 
-    document.getElementById("timer").innerHTML = hours + ":" + minutes + ":" + seconds;
+
 }, 1000 )
+
+
 
 
