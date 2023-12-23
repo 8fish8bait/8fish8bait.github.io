@@ -18,7 +18,7 @@ var timeNow = new Date().getTime();
     document.getElementById("timer").innerHTML = hours + ":" + minutes + ":" + seconds;}
     
     else{
-        document.getElementById("steam").innerHTML = "Kolla steam: spelet är Moving Out;"; 
+        document.getElementById("steam").innerHTML = "Kolla steam;"; 
                     document.getElementById("timer").innerHTML =  0 + ":" + 0 + ":" + 0;
             clearInterval(counter);
     }
